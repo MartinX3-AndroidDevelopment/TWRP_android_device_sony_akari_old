@@ -1,1 +1,3 @@
 TARGET_PREBUILT_KERNEL := device/sony/akari/prebuilt/Image.gz-dtb
+prebuilt
+recovery
