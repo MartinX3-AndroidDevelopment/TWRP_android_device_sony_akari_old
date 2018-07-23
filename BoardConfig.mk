@@ -59,6 +59,11 @@ BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 TARGET_PREBUILT_KERNEL := device/sony/akari/prebuilt/Image.gz-dtb
 
+# Device
+TARGET_KERNEL_CONFIG := sdm845-perf_defconfig
+CONFIG_IDTP9221=y
+CONFIG_MACH_SONY_AKARI=y
+
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
@@ -101,3 +106,6 @@ TW_THEME := portrait_hdpi
 
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := system/vendor
+
+# Workaround compiling error with TWRP sources
+ALLOW_MISSING_DEPENDENCIES=true
