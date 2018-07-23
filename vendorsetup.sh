@@ -14,7 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_h8216-eng
-add_lunch_combo aosp_h8216-userdebug
-add_lunch_combo aosp_h8266-eng
-add_lunch_combo aosp_h8266-userdebug
+add_lunch_combo aosp_akari-eng
+add_lunch_combo aosp_akari-userdebug
