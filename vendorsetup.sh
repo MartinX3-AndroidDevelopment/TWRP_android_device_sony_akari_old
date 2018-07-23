@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_akari-eng
-add_lunch_combo aosp_akari-userdebug
+add_lunch_combo omni_akari-eng
+add_lunch_combo omni_akari-userdebug
