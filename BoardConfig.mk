@@ -63,9 +63,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dt
 
 # Device
-TARGET_KERNEL_CONFIG := sdm845-perf_defconfig
-CONFIG_IDTP9221=y
-CONFIG_MACH_SONY_AKARI=y
+TARGET_KERNEL_CONFIG := aosp_tama_akari_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
