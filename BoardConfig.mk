@@ -60,7 +60,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 #TARGET_PREBUILT_KERNEL := device/sony/akari/prebuilt/Image.gz-dtb
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dt
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Device
 TARGET_KERNEL_CONFIG := aosp_tama_akari_defconfig
