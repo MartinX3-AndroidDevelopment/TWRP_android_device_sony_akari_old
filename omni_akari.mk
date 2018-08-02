@@ -59,6 +59,10 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 PRODUCT_COPY_FILES += \
     device/sony/akari/prebuilt/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
+#TWRP files
+PRODUCT_COPY_FILES += recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += recovery/root/etc/recovery.fstab:recovery/root/etc/recovery.fstab
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_akari
 PRODUCT_DEVICE := akari
