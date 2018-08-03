@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm845 \
-    sensors.sdm845
+    sensors.sdm845 \
     libgptutils \
     libz
 
