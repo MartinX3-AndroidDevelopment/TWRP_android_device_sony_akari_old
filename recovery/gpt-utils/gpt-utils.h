@@ -92,47 +92,47 @@ extern "C" {
  * TYPES
  ******************************************************************************/
 enum boot_update_stage {
-    UPDATE_MAIN = 1,
-    UPDATE_BACKUP,
-    UPDATE_FINALIZE
+	UPDATE_MAIN = 1,
+	UPDATE_BACKUP,
+	UPDATE_FINALIZE
 };
 
 enum gpt_instance {
-    PRIMARY_GPT = 0,
-    SECONDARY_GPT
+	PRIMARY_GPT = 0,
+	SECONDARY_GPT
 };
 
 enum boot_chain {
-    NORMAL_BOOT = 0,
-    BACKUP_BOOT
+	NORMAL_BOOT = 0,
+	BACKUP_BOOT
 };
 
 struct gpt_disk {
-    //GPT primary header
-    uint8_t *hdr;
-    //primary header crc
-    uint32_t hdr_crc;
-    //GPT backup header
-    uint8_t *hdr_bak;
-    //backup header crc
-    uint32_t hdr_bak_crc;
-    //Partition entries array
-    uint8_t *pentry_arr;
-    //Partition entries array for backup table
-    uint8_t *pentry_arr_bak;
-    //Size of the pentry array
-    uint32_t pentry_arr_size;
-    //Size of each element in the pentry array
-    uint32_t pentry_size;
-    //CRC of the partition entry array
-    uint32_t pentry_arr_crc;
-    //CRC of the backup partition entry array
-    uint32_t pentry_arr_bak_crc;
-    //Path to block dev representing the disk
-    char devpath[PATH_MAX];
-    //Block size of disk
-    uint32_t block_size;
-    uint32_t is_initialized;
+	//GPT primary header
+	uint8_t *hdr;
+	//primary header crc
+	uint32_t hdr_crc;
+	//GPT backup header
+	uint8_t *hdr_bak;
+	//backup header crc
+	uint32_t hdr_bak_crc;
+	//Partition entries array
+	uint8_t *pentry_arr;
+	//Partition entries array for backup table
+	uint8_t *pentry_arr_bak;
+	//Size of the pentry array
+	uint32_t pentry_arr_size;
+	//Size of each element in the pentry array
+	uint32_t pentry_size;
+	//CRC of the partition entry array
+	uint32_t pentry_arr_crc;
+	//CRC of the backup partition entry array
+	uint32_t pentry_arr_bak_crc;
+	//Path to block dev representing the disk
+	char devpath[PATH_MAX];
+	//Block size of disk
+	uint32_t block_size;
+	uint32_t is_initialized;
 };
 
 /******************************************************************************
@@ -149,8 +149,8 @@ int gpt_disk_get_disk_info(const char *dev, struct gpt_disk *disk);
 
 //Get pointer to partition entry from a allocated gpt_disk structure
 uint8_t* gpt_disk_get_pentry(struct gpt_disk *disk,
-                             const char *partname,
-                             enum gpt_instance instance);
+		const char *partname,
+		enum gpt_instance instance);
 
 //Update the crc fields of the modified disk structure
 int gpt_disk_update_crc(struct gpt_disk *disk);
@@ -186,7 +186,7 @@ int gpt_utils_set_xbl_boot_partition(enum boot_chain chain);
 //partition lies and the value is a vector of strings indicating which of
 //the passed in partition names sits on that device.
 int gpt_utils_get_partition_map(std::vector<std::string>& partition_list,
-                                std::map<std::string,std::vector<std::string>>& partition_map);
+                std::map<std::string,std::vector<std::string>>& partition_map);
 #ifdef __cplusplus
 }
 #endif

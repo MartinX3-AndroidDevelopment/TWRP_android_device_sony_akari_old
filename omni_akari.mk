@@ -48,10 +48,12 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    bootctrl.sdm845
+    bootctrl.sdm845 \
+    sensors.sdm845
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm845 \
+    sensors.sdm845
     libgptutils \
     libz
 
@@ -60,8 +62,8 @@ PRODUCT_COPY_FILES += \
     device/sony/akari/prebuilt/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 #TWRP files
-PRODUCT_COPY_FILES += recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
-PRODUCT_COPY_FILES += recovery/root/etc/recovery.fstab:recovery/root/etc/recovery.fstab
+PRODUCT_COPY_FILES += device/sony/akari/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/sony/akari/recovery/root/etc/recovery.fstab:recovery/root/etc/recovery.fstab
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_akari
@@ -69,3 +71,5 @@ PRODUCT_DEVICE := akari
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia XZ2
 PRODUCT_MANUFACTURER := Sony
+PRODUCT_PLATFORM := tama
+
