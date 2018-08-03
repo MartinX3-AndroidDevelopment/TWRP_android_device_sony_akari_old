@@ -110,4 +110,4 @@ TW_THEME := portrait_hdpi
 TARGET_COPY_OUT_VENDOR := system/vendor
 
 # Workaround compiling error with TWRP sources
-ALLOW_MISSING_DEPENDENCIES=true
+#ALLOW_MISSING_DEPENDENCIES=true #Use it only if you know, what you are doing!
