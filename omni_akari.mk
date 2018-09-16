@@ -27,7 +27,8 @@ AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
-    system
+    system \
+    vendor
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -48,18 +49,16 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    bootctrl.sdm845 \
-    sensors.sdm845
+    bootctrl.sdm845
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm845 \
-    sensors.sdm845 \
     libgptutils \
     libz
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
-    device/sony/akari/prebuilt/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 #TWRP files
 PRODUCT_COPY_FILES += device/sony/akari/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab

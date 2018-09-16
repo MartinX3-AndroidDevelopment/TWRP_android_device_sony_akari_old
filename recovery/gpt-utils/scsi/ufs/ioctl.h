@@ -18,7 +18,6 @@
  ****************************************************************************/
 #ifndef UAPI_UFS_IOCTL_H_
 #define UAPI_UFS_IOCTL_H_
-
 #include <linux/types.h>
 #define UFS_IOCTL_QUERY 0x5388
 #define UFS_IOCTL_WRITE_BUFFER 0x53EF
