@@ -38,7 +38,10 @@ TARGET_2ND_CPU_VARIANT := cortex-a9
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
-TARGET_NO_BOOTLOADER := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+TARGET_NO_RECOVERY := true
+TARGET_NO_BOOTLOADER := false
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -62,12 +65,12 @@ TARGET_PREBUILT_KERNEL := device/sony/akari/prebuilt/Image.gz-dtb
 # BOARD_PREBUILT_DTBOIMAGE := device/sony/akari/prebuilt/Image.gz-dtb
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+# BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Device
-TARGET_KERNEL_CONFIG := aosp_tama_akari_defconfig
-TARGET_RECOVERY_FSTAB := device/sony/akari/recovery/root/etc/recovery.fstab
-TARGET_DEVICE_NO_FPC := true
+# TARGET_KERNEL_CONFIG := aosp_tama_akari_defconfig
+# TARGET_RECOVERY_FSTAB := device/sony/akari/recovery/root/etc/recovery.fstab
+# TARGET_DEVICE_NO_FPC := true
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
