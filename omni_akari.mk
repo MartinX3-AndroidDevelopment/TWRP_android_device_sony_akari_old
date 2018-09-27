@@ -58,8 +58,7 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
-    device/sony/akari/prebuilt/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata # Omni 8.1
-#    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata # Omni 8.0
+    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 #TWRP files
 PRODUCT_COPY_FILES += device/sony/akari/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
