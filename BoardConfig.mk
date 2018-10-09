@@ -43,6 +43,21 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 #TARGET_NO_BOOTLOADER := false
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
+
+#BOARD_KERNEL_CMDLINE androidboot.hardware=qcom video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 zram.backend=z3fold msm_drm.dsi_display0=dsi_panel_cmd_display:config0 buildvariant=user
+#BOARD_KERNEL_BASE 00000000
+#BOARD_NAME
+#BOARD_PAGE_SIZE 4096
+#BOARD_HASH_TYPE sha1
+#BOARD_KERNEL_OFFSET 00008000
+#BOARD_RAMDISK_OFFSET 01000000
+#BOARD_SECOND_OFFSET 00f00000
+#BOARD_TAGS_OFFSET 00000100
+#BOARD_OS_VERSION 8.0.0
+#BOARD_OS_PATCH_LEVEL 2018-09
+
+
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8
