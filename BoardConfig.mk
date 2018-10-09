@@ -43,38 +43,20 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 #TARGET_NO_BOOTLOADER := false
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
-
-#BOARD_KERNEL_CMDLINE androidboot.hardware=qcom video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 zram.backend=z3fold msm_drm.dsi_display0=dsi_panel_cmd_display:config0 buildvariant=user
-#BOARD_KERNEL_BASE 00000000
-#BOARD_NAME
-#BOARD_PAGE_SIZE 4096
-#BOARD_HASH_TYPE sha1
-#BOARD_KERNEL_OFFSET 00008000
-#BOARD_RAMDISK_OFFSET 01000000
-#BOARD_SECOND_OFFSET 00f00000
-#BOARD_TAGS_OFFSET 00000100
-#BOARD_OS_VERSION 8.0.0
-#BOARD_OS_PATCH_LEVEL 2018-09
-
-
-
 # Kernel
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 zram.backend=z3fold msm_drm.dsi_display0=dsi_panel_cmd_display:config0 buildvariant=user
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x37 ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += coherent_pool=8M
-BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1 user_debug=31
-BOARD_KERNEL_CMDLINE += androidboot.hardware=akari
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=1d84000.ufshc
-BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000
-BOARD_KERNEL_CMDLINE += msm_drm.dsi_display0=dsi_panel_cmd_display:config0
-BOARD_KERNEL_CMDLINE += swiotlb=2048
-BOARD_KERNEL_CMDLINE += service_locator.enable=1
+BOARD_NAME :=
+BOARD_PAGE_SIZE := 4096
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
-BOARD_RAMDISK_OFFSET := 0x02000000
+BOARD_HASH_TYPE := sha1
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_SECOND_OFFSET := 0x00f00000
+BOARD_TAGS_OFFSET := 0x00000100
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_OS_VERSION := 8.0.0
+BOARD_OS_PATCH_LEVEL := 2018-09
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 TARGET_PREBUILT_KERNEL := device/sony/akari/prebuilt/Image.gz-dtb
 # BOARD_PREBUILT_DTBOIMAGE := device/sony/akari/prebuilt/Image.gz-dtb

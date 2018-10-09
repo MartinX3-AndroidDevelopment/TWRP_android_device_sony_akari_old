@@ -58,7 +58,8 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
-    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+#    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata #TWRP8.1
+#     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata #TWRP8.0
 
 #TWRP files
 PRODUCT_COPY_FILES += device/sony/akari/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
