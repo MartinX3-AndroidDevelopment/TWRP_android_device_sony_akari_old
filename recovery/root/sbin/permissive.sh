@@ -21,7 +21,7 @@ touch_id=`cat /sys/devices/dsi_panel_driver/panel_id`
         insmod /sbin/tof_sensor.ko
         insmod /sbin/tcs3490.ko
         insmod /sbin/sony_camera.ko
-        insmod /sbin/fpc1145_platform.ko
+        insmod /sbin/fpc1075_platform.ko
         insmod /sbin/synaptics_tcm_i2c.ko
         insmod /sbin/synaptics_tcm_core.ko
         insmod /sbin/synaptics_tcm_touch.ko
