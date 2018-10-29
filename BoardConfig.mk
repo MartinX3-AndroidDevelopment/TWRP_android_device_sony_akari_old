@@ -109,6 +109,8 @@ TW_NO_SCREEN_BLANK := true
 # Encryption
 PLATFORM_SECURITY_PATCH := 2025-12-31
 TW_INCLUDE_CRYPTO := true
+#TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+#TW_INCLUDE_FBE := true
 
 # Extras
 # Disable secure discard because it's SLOW
