@@ -41,8 +41,23 @@ ENABLE_SCHEDBOOST := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
-TARGET_NO_BOOTLOADER := true
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+  boot \
+  system \
+  vendor
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+PRODUCT_PACKAGES += \
+  update_engine \
+  update_verifier
 TARGET_USES_UEFI := true
+
+
+# Android Verified Boot #For later usage
+#BOARD_AVB_ENABLE := false
+#BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
@@ -61,7 +76,6 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864 ## There is no recovery.
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4227858432
 # Reserve space for data encryption (44712771584-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 44712755200
@@ -86,13 +100,9 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
-AB_OTA_UPDATER := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 1023
 TW_THEME := portrait_hdpi
-TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
-TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TW_NO_SCREEN_BLANK := true
 
@@ -101,5 +111,6 @@ PLATFORM_SECURITY_PATCH := 2025-12-31
 TW_INCLUDE_CRYPTO := true
 
 # Extras
+# Disable secure discard because it's SLOW
 BOARD_SUPPRESS_SECURE_ERASE := true
 TW_USE_LEDS_HAPTICS := true
