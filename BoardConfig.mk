@@ -111,7 +111,7 @@ TW_NO_SCREEN_BLANK := true
 # Encryption
 PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2025-12-31
-TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO := true ####Removed from the normal builds until it got fixed
 #TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 #TW_INCLUDE_FBE := true
 
