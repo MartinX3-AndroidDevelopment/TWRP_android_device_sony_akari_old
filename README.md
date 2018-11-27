@@ -1,5 +1,9 @@
 TWRP device configuration for Sony Xperia XZ2
 ==============
+## XDA Thread
+
+https://forum.xda-developers.com/xperia-xz2/development/recovery-twrp-3-2-2-0-touch-recovery-t3821597
+
 ## Compile
 
 First checkout minimal twrp with omnirom tree:
