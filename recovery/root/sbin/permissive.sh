@@ -40,8 +40,8 @@ touch_id=`cat /sys/devices/dsi_panel_driver/panel_id`
     fi
 
 #XZ3 SSW & ATMEL
-#    if [ "$touch_id" == "XZ3" ]; then
-#        insmod /sbin/atmel_mxt640u.ko
-#        insmod /sbin/ssw_mon.ko
-#        echo 1 > /sys/devices/virtual/input/lge_touch/charge_out
-#    fi
+    if [ "$touch_id" == "XZ3" ]; then
+        insmod /sbin/atmel_mxt640u.ko
+        insmod /sbin/ssw_mon.ko
+        echo 1 > /sys/devices/virtual/input/lge_touch/charge_out
+    fi
