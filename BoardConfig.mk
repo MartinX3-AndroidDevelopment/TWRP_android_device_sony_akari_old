@@ -104,16 +104,16 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 1023
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
-TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TW_NO_SCREEN_BLANK := true
 
 # Encryption
 PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2025-12-31
-#TW_INCLUDE_CRYPTO := true ####Removed from the normal builds until it got fixed
-#TARGET_KEYMASTER_WAIT_FOR_QSEE := true
-#TW_INCLUDE_FBE := true
+#### For encrpytion testing ####
+# TW_INCLUDE_CRYPTO := true
+# TW_INCLUDE_CRYPTO_FBE := true
+#### For encrpytion testing ####
 
 # Extras
 # Disable secure discard because it's SLOW
