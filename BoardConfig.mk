@@ -104,11 +104,11 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 1023
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.0/file"
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TW_NO_SCREEN_BLANK := true
 
 # Encryption
-PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2025-12-31
 #### For encrpytion testing ####
 # TW_INCLUDE_CRYPTO := true

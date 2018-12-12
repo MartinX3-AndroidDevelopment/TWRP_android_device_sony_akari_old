@@ -1,6 +1,6 @@
 ro.display.series=Xperia XZ2
-ro.build.version.release_orig=$PLATFORM_VERSION
-ro.build.version.security_patch_orig=$PLATFORM_SECURITY_PATCH
+#ro.build.version.release_orig=$PLATFORM_VERSION
+#ro.build.version.security_patch_orig=$PLATFORM_SECURITY_PATCH
 ro.product.board=sdm845
 ro.board.platform=sdm845
 ro.build.version.release=9
